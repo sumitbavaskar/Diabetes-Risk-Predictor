@@ -3,7 +3,8 @@
 
 An end-to-end machine learning web application that predicts the risk of diabetes based on health metrics. Built using Python, Flask, and scikit-learn.
 
-![App Screenshot](https://via.placeholder.com/800x400?text=Diabetes+Predictor+AI+App)
+![App Screenshot]<img width="1037" height="645" alt="Screenshot 2025-08-08 203321" src="https://github.com/user-attachments/assets/935ec60c-696c-414e-a31d-d78712d230a9" />
+
 
 ---
 
