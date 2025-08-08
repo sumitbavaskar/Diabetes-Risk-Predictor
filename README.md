@@ -10,7 +10,7 @@ An end-to-end machine learning web application that predicts the risk of diabete
 
 ## 🚀 Live Demo
 
-🔗 [Click here to try the app](https://diabetes-risk-predictor-n8ej.onrender.com)
+🔗 Comming Soon
 
 ---
 
