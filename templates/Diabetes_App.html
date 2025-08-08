@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Diabetes Risk Predictor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: #f0f4f8;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .predict-box {
+      max-width: 700px;
+      margin: 60px auto;
+      padding: 40px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .form-control {
+      border-radius: 8px;
+    }
+    .btn-primary {
+      width: 100%;
+      border-radius: 8px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    .result-box {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="predict-box">
+    <h2>Diabetes Risk Predictor</h2>
+    <form method="POST" action="/predict">
+      <div class="row g-3">
+        <div class="col-md-6">
+          <input type="number" name="Pregnancies" class="form-control" placeholder="Pregnancies" min="0" step="any" required>
+        </div>
+        <div class="col-md-6">
+          <input type="number" name="Glucose" class="form-control" placeholder="Glucose Level" min="0" step="any" required>
+        </div>
+        <div class="col-md-6">
+          <input type="number" name="BloodPressure" class="form-control" placeholder="Blood Pressure" min="0" step="any" required>
+        </div>
+        <div class="col-md-6">
+          <input type="number" name="SkinThickness" class="form-control" placeholder="Skin Thickness" min="0" step="any" required>
+        </div>
+        <div class="col-md-6">
+          <input type="number" name="Insulin" class="form-control" placeholder="Insulin Level" min="0" step="any" required>
+        </div>
+        <div class="col-md-6">
+          <input type="number" name="BMI" class="form-control" placeholder="BMI" min="0" step="any" required>
+        </div>
+        <div class="col-md-6">
+          <input type="number" name="DiabetesPedigreeFunction" class="form-control" placeholder="Pedigree Function" min="0" step="any" required>
+        </div>
+        <div class="col-md-6">
+          <input type="number" name="Age" class="form-control" placeholder="Age" min="0" step="any" required>
+        </div>
+      </div>
+      <div class="mt-4">
+        <button type="submit" class="btn btn-primary">Predict</button>
+      </div>
+    </form>
+
+    {% if prediction_text  and prediction_test != "" %}
+    <div class="result-box alert alert-info mt-4">
+      <h5>{{ prediction_text }}</h5>
+    </div>
+    {% endif %}
+  </div>
+
+</body>
+</html>
